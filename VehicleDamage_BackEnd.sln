@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleDamage_BackEnd", "VehicleDamage_BackEnd\VehicleDamage_BackEnd.csproj", "{2179DD4B-80FE-468F-8FA7-94E37133CE0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleDamage_BackEnd.Data", "VehicleDamage_BackEnd.Data\VehicleDamage_BackEnd.Data.csproj", "{D4B1165C-65E3-411B-B4BD-BB1DE9EC5608}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2179DD4B-80FE-468F-8FA7-94E37133CE0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2179DD4B-80FE-468F-8FA7-94E37133CE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2179DD4B-80FE-468F-8FA7-94E37133CE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2179DD4B-80FE-468F-8FA7-94E37133CE0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B1165C-65E3-411B-B4BD-BB1DE9EC5608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B1165C-65E3-411B-B4BD-BB1DE9EC5608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B1165C-65E3-411B-B4BD-BB1DE9EC5608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B1165C-65E3-411B-B4BD-BB1DE9EC5608}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC8FB619-FCA0-4AD5-AA28-AACF4919785C}
+	EndGlobalSection
+EndGlobal
