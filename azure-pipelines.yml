@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: '6d447322-1fd4-4381-8fb4-307d6056c634'
   imageRepository: 'vehicledamagebackend'
   containerRegistry: 'vehicledamagecont.azurecr.io'
-  dockerfilePath: '*/Dockerfile'
+  dockerfilePath: '/Dockerfile'
   tag: '$(Build.BuildId)'
   
   # Agent VM image name
