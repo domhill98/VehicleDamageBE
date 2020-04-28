@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VehicleDamage_BackEnd.Data\VehicleDamage_BackEnd.Data.csproj" />
+    <ProjectReference Include="..\VehicleDamage_BackEnd_Data\VehicleDamage_BackEnd_Data.csproj" />
   </ItemGroup>
 
 </Project>

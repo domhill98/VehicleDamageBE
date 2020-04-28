@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VehicleDamage_BackEnd.Data
+namespace VehicleDamage_BackEnd_Data
 {
     public static class VehicleDamageDBInitialiser
     {
 
         public static async Task SeedTestData(VehicleDamageDB context, IServiceProvider services)
         {
-            if (context.Vehicles.Any())
+            if (context.Vehicle.Any())
             {
                 //DB already seeded
                 return;
@@ -23,7 +23,7 @@ namespace VehicleDamage_BackEnd.Data
                 new Make{id = Guid.Parse("8d3b3b08-1eba-4974-82d9-df7c09615376"), name = "Ford" },
                 new Make{id = Guid.Parse("82a3d9a6-4945-45d1-86f4-af909f0e4bb1"), name = "Ferrari" }
             };
-            makes.ForEach(m => context.Makes.Add(m));
+            makes.ForEach(m => context.Make.Add(m));
 
             var clockHistories = new List<ClockHistory> 
             {
@@ -33,7 +33,7 @@ namespace VehicleDamage_BackEnd.Data
                 new ClockHistory{ Id = Guid.Parse("604f7632-4942-49b7-9538-8675787b339c"), driverID = Guid.NewGuid(), lplateNum = "3456", state = "Out", time = DateTime.Now },
                 new ClockHistory{ Id = Guid.Parse("7a63174f-8896-4268-8758-981277d37b9d"), driverID = Guid.NewGuid(), lplateNum = "4567", state = "Out", time = DateTime.Now }
             };
-            clockHistories.ForEach(c => context.ClockHistories.Add(c));
+            clockHistories.ForEach(c => context.ClockHistory.Add(c));
 
             await context.SaveChangesAsync();
 
@@ -44,7 +44,7 @@ namespace VehicleDamage_BackEnd.Data
                 new DamageHistory{ Id = Guid.NewGuid(), driverID = Guid.NewGuid(), lplateNum = "2345", state = "Damaged", time = DateTime.Now, resolved = true},
                 new DamageHistory{ Id = Guid.NewGuid(), driverID = Guid.NewGuid(), lplateNum = "4567", state = "Damaged", time = DateTime.Now, resolved = true}
             };
-            damageHistories.ForEach(d => context.DamageHistories.Add(d));
+            damageHistories.ForEach(d => context.DamageHistory.Add(d));
 
             await context.SaveChangesAsync();
 
@@ -56,7 +56,7 @@ namespace VehicleDamage_BackEnd.Data
                 new Vehicle{ licenseNum = "4567", makeID = Guid.Parse("8d3b3b08-1eba-4974-82d9-df7c09615376"), make = makes[1], model = "Fiesta", colour = "Black", state = "In", active = true },
                 new Vehicle{ licenseNum = "5678", makeID = Guid.Parse("2648f895-848f-4163-b9b8-e77c8b48a741"), make = makes[3], model = "Fast", colour = "Green", state = "In", active = false }
             };
-            vehicles.ForEach(v => context.Vehicles.Add(v));
+            vehicles.ForEach(v => context.Vehicle.Add(v));
 
 
             await context.SaveChangesAsync();

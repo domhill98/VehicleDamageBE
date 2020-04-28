@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleDamage_BackEnd", "VehicleDamage_BackEnd\VehicleDamage_BackEnd.csproj", "{2179DD4B-80FE-468F-8FA7-94E37133CE0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleDamage_BackEnd", "VehicleDamage_BackEnd\VehicleDamage_BackEnd.csproj", "{2179DD4B-80FE-468F-8FA7-94E37133CE0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleDamage_BackEnd.Data", "VehicleDamage_BackEnd.Data\VehicleDamage_BackEnd.Data.csproj", "{D4B1165C-65E3-411B-B4BD-BB1DE9EC5608}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleDamage_BackEnd_Data", "VehicleDamage_BackEnd_Data\VehicleDamage_BackEnd_Data.csproj", "{A55B27B9-200C-4AF5-8E2C-589A6401818B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{2179DD4B-80FE-468F-8FA7-94E37133CE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2179DD4B-80FE-468F-8FA7-94E37133CE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2179DD4B-80FE-468F-8FA7-94E37133CE0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4B1165C-65E3-411B-B4BD-BB1DE9EC5608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4B1165C-65E3-411B-B4BD-BB1DE9EC5608}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4B1165C-65E3-411B-B4BD-BB1DE9EC5608}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4B1165C-65E3-411B-B4BD-BB1DE9EC5608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A55B27B9-200C-4AF5-8E2C-589A6401818B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A55B27B9-200C-4AF5-8E2C-589A6401818B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A55B27B9-200C-4AF5-8E2C-589A6401818B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A55B27B9-200C-4AF5-8E2C-589A6401818B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

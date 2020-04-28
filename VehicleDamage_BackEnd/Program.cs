@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using VehicleDamage_BackEnd.Data;
+using VehicleDamage_BackEnd_Data;
 
 namespace VehicleDamage_BackEnd
 {
@@ -26,9 +26,11 @@ namespace VehicleDamage_BackEnd
                 if (env.IsDevelopment())
                 {
                     var context = services.GetRequiredService<VehicleDamageDB>();
-                    context.Database.Migrate();
+                
                     try
                     {
+                        context.Database.Migrate();
+
                         VehicleDamageDBInitialiser.SeedTestData(context, services).Wait();
                     }
                     catch (Exception)

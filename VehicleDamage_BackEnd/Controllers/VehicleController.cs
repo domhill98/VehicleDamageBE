@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using VehicleDamage_BackEnd.Data;
+using Microsoft.EntityFrameworkCore;
+using VehicleDamage_BackEnd_Data;
 
 namespace VehicleDamage_BackEnd.Controllers
 {
@@ -21,7 +22,18 @@ namespace VehicleDamage_BackEnd.Controllers
         }
 
 
+        [HttpGet]
+        public ActionResult<IEnumerable<Vehicle>> GetVehicles() 
+        {
+            var vehicles = _context.Vehicle.Include(p => p.make).AsEnumerable();
 
+            if(vehicles == null) 
+            {
+                return NotFound();
+            }
+
+            return Ok(vehicles);
+        }
 
 
 

@@ -3,17 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace VehicleDamage_BackEnd.Data
+namespace VehicleDamage_BackEnd_Data
 {
     public class VehicleDamageDB : DbContext
     {
-        public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<Vehicle> Vehicle { get; set; }
 
-        public DbSet<ClockHistory> ClockHistories { get; set; }
+        public DbSet<ClockHistory> ClockHistory { get; set; }
 
-        public DbSet<DamageHistory> DamageHistories { get; set; }
+        public DbSet<DamageHistory> DamageHistory { get; set; }
 
-        public DbSet<Make> Makes { get; set; }
+        public DbSet<Make> Make { get; set; }
 
         public VehicleDamageDB(DbContextOptions<VehicleDamageDB> options): base(options) { }
 
