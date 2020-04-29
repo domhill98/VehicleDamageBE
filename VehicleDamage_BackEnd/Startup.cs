@@ -38,6 +38,8 @@ namespace VehicleDamage_BackEnd
             {
                 OptionsBuilder.EnableRetryOnFailure(3, TimeSpan.FromSeconds(10), null);
             }));
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

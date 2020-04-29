@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.WindowsAzure.Storage;
 using VehicleDamage_BackEnd_Data;
 
 namespace VehicleDamage_BackEnd.Controllers
@@ -73,6 +74,11 @@ namespace VehicleDamage_BackEnd.Controllers
                 return BadRequest();
             }
         }
+
+
+
+
+
 
     }
 }
