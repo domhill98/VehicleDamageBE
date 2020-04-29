@@ -6,6 +6,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
 COPY ["VehicleDamage_BackEnd/VehicleDamage_BackEnd.csproj", "VehicleDamage_BackEnd/"]
+COPY ["VehicleDamage_BackEnd_Data/VehicleDamage_BackEnd_Data.csproj", "VehicleDamage_BackEnd_Data/"]
 RUN dotnet restore "VehicleDamage_BackEnd/VehicleDamage_BackEnd.csproj"
 COPY . .
 WORKDIR "/src/VehicleDamage_BackEnd"
