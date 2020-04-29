@@ -23,6 +23,15 @@ namespace VehicleDamage_BackEnd.Controllers
         }
 
 
+
+        [HttpGet("servicechecker")]
+        public ActionResult<Vehicle> ServiceChecker() 
+        {
+            return Ok(new Vehicle { licenseNum = "9999" });
+        }
+
+
+
         [HttpGet]
         public ActionResult<IEnumerable<Vehicle>> GetVehicles() 
         {
