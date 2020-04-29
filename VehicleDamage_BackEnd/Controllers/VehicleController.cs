@@ -22,6 +22,13 @@ namespace VehicleDamage_BackEnd.Controllers
             _context = context;
         }
 
+        [HttpGet("Test1")]
+        public ActionResult<string> Test1() 
+        {
+            var conn = _context.Database.CanConnect();
+            return Ok(conn);
+        }
+
 
         [HttpGet]
         public ActionResult<IEnumerable<Vehicle>> GetVehicles() 
