@@ -26,8 +26,7 @@ namespace VehicleDamage_BackEnd.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Vehicle>> GetVehicles() 
         {
-            var vehicles = _context.Vehicle.AsEnumerable();
-            //var vehicles = _context.Vehicle.Include(p => p.make).AsEnumerable();
+            var vehicles = _context.Vehicle.Include(p => p.make).AsEnumerable();
 
             if (vehicles == null) 
             {
