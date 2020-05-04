@@ -22,14 +22,6 @@ namespace VehicleDamage_BackEnd.Controllers
             _context = context;
         }
 
-        [HttpGet("Test1")]
-        public ActionResult<string> Test1() 
-        {
-            var conn = _context.Database.CanConnect();
-            return Ok(conn);
-        }
-
-
         [HttpGet]
         public ActionResult<IEnumerable<Vehicle>> GetVehicles() 
         {
@@ -82,6 +74,28 @@ namespace VehicleDamage_BackEnd.Controllers
 
             return Ok(vehicles);
         }
+
+        [HttpPost("Insert")]
+        public async Task<ActionResult> InsertVehicle([FromBody]Vehicle dto) 
+        {
+            if (dto == null)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                _context.Vehicle.Add(dto);
+                await _context.SaveChangesAsync();
+
+                return Ok();
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
 
         [HttpPost("Update")]
         public async Task<ActionResult> UpdateVehicle([FromBody]Vehicle dto)  
