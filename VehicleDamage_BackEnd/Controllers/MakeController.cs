@@ -8,6 +8,7 @@ using VehicleDamage_BackEnd_Data;
 
 namespace VehicleDamage_BackEnd.Controllers
 {
+    //API routing
     [Route("api/Make")]
     [ApiController]
     public class MakeController : ControllerBase
@@ -19,6 +20,10 @@ namespace VehicleDamage_BackEnd.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// Get all the makes in the db
+        /// </summary>
+        /// <returns>List of makes</returns>
         [HttpGet]
         public ActionResult<IEnumerable<Make>> GetMakes()
         {

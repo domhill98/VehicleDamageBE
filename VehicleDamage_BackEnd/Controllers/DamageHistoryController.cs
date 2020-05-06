@@ -9,6 +9,7 @@ using VehicleDamage_BackEnd_Data;
 
 namespace VehicleDamage_BackEnd.Controllers
 {
+    //Api Routing
     [Route("api/DamageHistory")]
     [ApiController]
     public class DamageHistoryController : ControllerBase
@@ -20,6 +21,11 @@ namespace VehicleDamage_BackEnd.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// Get list of Damage History records for given lisence plate
+        /// </summary>
+        /// <param name="lplate">lplate to search for</param>
+        /// <returns>List of Damage History Records</returns>
         [HttpGet("{lplate}")]
         public ActionResult<IEnumerable<DamageHistory>> GetDamageHistories(string lplate) 
         {
@@ -28,11 +34,17 @@ namespace VehicleDamage_BackEnd.Controllers
                 return BadRequest();
             }
 
+            //Filter for lplate
             var damage = _context.DamageHistory.Where(x => x.lplateNum == lplate);
 
             return Ok(damage);
         }
 
+        /// <summary>
+        /// Update Damage History record in db
+        /// </summary>
+        /// <param name="dto">Record to be updated with new values</param>
+        /// <returns></returns>
         [HttpPost("Update")]
         public async Task<ActionResult> UpdateDamageHistory([FromBody]DamageHistory dto) 
         {
@@ -43,6 +55,7 @@ namespace VehicleDamage_BackEnd.Controllers
 
             try
             {
+                //Update and save the db context
                 _context.DamageHistory.Update(dto);
                 await _context.SaveChangesAsync();
 
@@ -54,6 +67,11 @@ namespace VehicleDamage_BackEnd.Controllers
             }
         }
 
+        /// <summary>
+        /// Add Damage History record in db
+        /// </summary>
+        /// <param name="dto">Record to be added</param>
+        /// <returns>HTTP Response</returns>
         [HttpPost("Insert")]
         public async Task<ActionResult> InsertDamageHistory([FromBody]DamageHistory dto)
         {
@@ -64,6 +82,7 @@ namespace VehicleDamage_BackEnd.Controllers
 
             try
             {
+                //Add and save the db context
                 _context.DamageHistory.Add(dto);
                 await _context.SaveChangesAsync();
 
